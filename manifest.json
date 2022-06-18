@@ -1,0 +1,11 @@
+{
+    "name": "Lesser Bots for GitHub Pull Requests",
+    "description": "Toggle visibility of GitHub bot PR comments",
+    "version": "0.01",
+    "manifest_version": 3,
+    "permissions": ["storage", "scripting", "tabs"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "host_permissions": ["<all_urls>"]
+  }
