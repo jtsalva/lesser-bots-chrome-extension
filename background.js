@@ -2,7 +2,7 @@ const GitHubPullRequestUrlPattern = new RegExp('^(.*):\/\/(.*)github(.*)\/(.*)\/
 
 try {
     chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-        if (changeInfo.status == 'complete' && GitHubPullRequestUrlPattern.test(tab.url)) {
+        if (changeInfo.status === 'complete' && GitHubPullRequestUrlPattern.test(tab.url)) {
             chrome.scripting.executeScript({
                 files: ['contentScript.js'],
                 target: { tabId }
